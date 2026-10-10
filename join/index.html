@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a shared list in Daytray</title>
+<style>
+body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:#fff;color:#111;padding:48px 24px;max-width:560px;margin-inline:auto;line-height:1.5}
+h1{font-size:1.25rem;margin:0 0 24px}
+.code{font-family:ui-monospace,Menlo,monospace;font-size:3rem;letter-spacing:.2em;border:2px solid currentColor;border-radius:0;padding:16px 20px;display:inline-block;margin:0 0 24px}
+.note{color:#555;font-size:.95rem}
+@media (prefers-color-scheme:dark){body{background:#111;color:#f2f2f2}.note{color:#aaa}}
+</style>
+</head>
+<body>
+<h1>You have been invited to a shared list in Daytray</h1>
+<div class="code" id="code" aria-live="polite">------</div>
+<p>Open Daytray and enter this code under Settings, Join a shared list.</p>
+<p class="note">Daytray is available through TestFlight by invite. Ask the person who sent you this link to invite you.</p>
+<script>
+var c=new URLSearchParams(location.search).get("c");
+if(c){document.getElementById("code").textContent=c.replace(/[^A-Za-z0-9]/g,"").slice(0,12).toUpperCase()}
+</script>
+</body>
+</html>
